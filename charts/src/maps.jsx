@@ -12,7 +12,7 @@ const GermanyMap = () => {
   const handleClick = (name) => {
     setSelectedState(name);
   };
-//sind die funktionen oben
+
   const handleReset = () => {
     setSelectedState(null);
   };
@@ -55,7 +55,6 @@ const GermanyMap = () => {
 
   return (
     <div style={{ display: 'flex' }}>
-      {/* Linke Seite: entweder die Legende oder das ausgewählte Bundesland */}
       <div style={{ width: '200px', marginRight: '20px' }}>
         {/* Wenn ein Bundesland ausgewählt ist */}
         {selectedState && (
@@ -65,7 +64,6 @@ const GermanyMap = () => {
           </div>
         )}
 
-        {/* Wenn kein Bundesland ausgewählt ist, zeige die Legende */}
         {!selectedState && (
           <div>
             <h3>Legende:</h3>
@@ -171,7 +169,6 @@ const GermanyMap = () => {
         )}
       </div>
 
-      {/* Rechte Seite: die Karte */}
       <div style={{ height: '100%', width: '800px' }}>
         <ComposableMap
           projectionConfig={{ scale: 2000, center: [10, 51], translate: [400, 300] }}
